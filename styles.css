@@ -44,18 +44,26 @@ p {
 img {
     display: block;
     margin: 0 auto; /* center pics */
-    max-width: 100%; /* Adjust the width as needed */
+    width: 200px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
-/* Define a spin animation */
+/* Define a spin animation 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Apply the spin animation to the logo on hover */
+/* Apply the spin animation to the logo on hover 
 img.logo:hover {
     animation: spin 1s linear infinite;
 }
+*/
 
+img.logo {
+    transition: opacity 0.3s ease;
+}
+
+img.logo:hover {
+    opacity: 0.8; /* Adjust opacity level as needed */
+}
