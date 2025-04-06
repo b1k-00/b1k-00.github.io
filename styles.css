@@ -29,8 +29,12 @@ section {
     padding: 20px;
 }
 
-h1, h2 {
-    color: blue;
+header h1 {
+    color: #4A90E2;
+}
+
+header h2 {
+    color: #333;
 }
 
 p {
