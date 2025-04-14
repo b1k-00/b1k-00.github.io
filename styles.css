@@ -11,18 +11,6 @@ header {
     text-align: center;
 }
 
-nav {
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
-}
-
 section {
     padding: 20px;
 }
