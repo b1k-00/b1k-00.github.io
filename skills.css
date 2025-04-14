@@ -1,0 +1,145 @@
+/* Skills section */
+#skills {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    position: relative;
+}
+
+#skills h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Filter buttons */
+.skill-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skill-filter button {
+    padding: 10px 20px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #555;
+}
+
+.skill-filter button:hover {
+    background-color: #d1d1d1;
+}
+
+.skill-filter button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Skill cards */
+#skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+#skill-list li {
+    background: #f1f8ff;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+#skill-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Category specific colors */
+#skill-list li[data-category="programming"] {
+    border-left-color: #e74c3c;
+    background-color: #ffeeee;
+}
+
+#skill-list li[data-category="framework"] {
+    border-left-color: #9b59b6;
+    background-color: #f5eeff;
+}
+
+#skill-list li[data-category="tools"] {
+    border-left-color: #2ecc71;
+    background-color: #eefff5;
+}
+
+/* Animation for filtering */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Skill icon/badges */
+#skill-list li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #skill-list {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .skill-filter {
+        gap: 10px;
+    }
+    
+    .skill-filter button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #skills {
+        padding: 20px 15px;
+    }
+    
+    #skill-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
