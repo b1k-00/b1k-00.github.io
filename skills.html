@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills: Brennen Collins</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="skills.css">
 </head>
 <body>
-    <header>
-        <h1>Skills</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-    </nav>
-    <section>
-        <h2>Skills</h2>
-        <p>SQL, C#, Git, GitHub, SQL Server Management Studio, Entity Framework Core, Microsoft ASP.NET Core MVC, GITLAB, .NET CORE 6, Dependency Injection, Azure Entra Id, ServiceNow, SolarWinds, CLI, Kali Linux & Ubuntu.</p>
-        <img src="BrennenC_Q1_24(2).pdf" alt="Test">    
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skill-filter">
+            <button data-category="all" class="active">All Skills</button>
+            <button data-category="programming">Programming Languages</button>
+            <button data-category="framework">Frameworks</button>
+            <button data-category="tools">Tools</button>
+        </div>
+        <ul id="skill-list">
+            <li data-category="programming">C#</li>
+            <li data-category="programming">SQL</li>
+            <li data-category="programming">Python</li>
+            <li data-category="programming">JavaScript</li>
+            <li data-category="programming">HTML / CSS</li>
+            <li data-category="tools">Git & GitHub</li>
+            <li data-category="tools">SQLite / MySQL</li>
+            <li data-category="tools">Linux Distro</li>
+            <li data-category="tools">Solar Winds</li>
+            <li data-category="tools">CLI</li>
+            <li data-category="tools">VS/VS Code/JetBrains IDEs</li>
+            <li data-category="framework">Entity Framework Core</li>
+            <li data-category="framework">React</li>
+            <li data-category="framework">Fast API</li>
+            <li data-category="framework">ASP.NET Core</li>
+        </ul>
     </section>
+
+    <script src="skills.js"></script>
 </body>
 </html>
